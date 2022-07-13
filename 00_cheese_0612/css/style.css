@@ -1,0 +1,389 @@
+/* ここから下に記載していく */
+
+/* 共通設定 */
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 25px;
+    font-family:'メイリオ', 'Meiryo', sans-serif;
+}
+
+.title-color {
+    color:#ffd61a;
+}
+
+a,a:hover,a:visited{
+    color: inherit;
+}
+
+/* ヘッダー */
+
+.wrap {
+    max-width:1200px;
+    margin : 0 auto;
+    color:#222;
+}
+
+header {
+    display:flex;
+}
+
+.nav {
+    display: flex;
+    margin:0 0 0 auto;
+}
+
+/* メモ：align-itemsのデフォルトがstretchなのでこれをやらないと画像が伸びる
+https://moshashugyo.com/media/flexbox-img-extend */
+.logo {
+    align-self: center;
+}
+
+.nav >li {
+    padding:50px 25px;
+    font-size: 21px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* トップ画像 */
+
+.mainvisual {
+    position:relative; 
+    background-image: url("../img/mainbg.png");
+    background-size: cover;
+    padding-top: 38%;
+    /* メモ：画像はもともと高さが無い。高さを可変にするための方法 */
+    /* https://qiita.com/mame_hashbill/items/792379ad2ce9c764e0cb */
+}
+
+
+.title-char {
+    /* この設定で背景文字を真ん中にできているが、理由わかってない。。 */
+    position:absolute;
+    flex-direction: column;
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top:38%;
+    left:19%;
+}
+
+.title-char h1 {
+    font-size:48px;
+    font-weight: bold;
+}
+
+.title-char h2 {
+    padding-top:30px;
+    font-size:36px;
+}
+
+/* ABOUT */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.about h3 {
+    font-size: 24px;
+    padding-top:60px;
+    padding-bottom:30px;
+    font-weight: bold;
+}
+
+.about h4{
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.summary {
+    padding: 40px 0;
+}
+
+.about-img {
+    padding-top: 80px;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 25%;
+}
+
+/* COURSE */
+
+.course h3 {
+    font-size: 24px;
+    padding-top:60px;
+    padding-bottom:30px;
+    font-weight: bold;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-wraps {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-part {
+    width: 50%;
+    background-color:#fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.course-part img {
+    width: 100%;
+}
+
+.course-part h4 {
+    padding-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.part-text {
+    padding-left: 50px;
+    width: 430px;
+}   
+
+.part-text {
+    padding-right: 50px;
+    width: 430px;
+}
+
+.set-right {
+    align-self: flex-start;
+}
+
+.set-left {
+    align-self: flex-end;
+}
+
+
+/* NEWS */
+
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.news h3 {
+    font-size: 24px;
+    padding-top:60px;
+    padding-bottom:30px;
+    font-weight: bold;
+}
+
+.news h4 {
+    font-size: 18px;
+    padding-bottom:60px;
+}
+
+.news-img-wraps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.news-part {
+    width:300px;
+}
+
+.news-part:hover {
+    background-color: #ffc9d7;
+    }
+
+.date-part {
+    font-size: 18px;
+    padding-top:30px;
+    padding-bottom:24px;
+}
+
+.text-part {
+    font-size:16px;
+}
+
+.cta-btn {
+    background-color:#ffd61a;
+    width:300px;
+    height:60px;
+    color:rgb(214, 208, 208);
+    font-size: 18px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-btn {
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+
+.cta-btn:hover{
+    background-color:#ffc9d7;
+}
+
+/* ACCESS */
+.access {
+    background-color:#fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.access >h3 {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.access >h4 {
+    padding-bottom: 60px;
+}
+
+.info-wraps {
+    /* 微妙に左にずれているが、うまく中央にできなかった。。 */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    row-gap: 30px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.item-name{
+    width: 30%;
+    height: 50px;
+}
+
+.item-text {
+    width: 70%;
+    height: 50px;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.contact > h3{
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.contact > h4 {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.note {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.form-wraps{
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+}
+
+.form-name {
+    width: 37.5%;
+    border-top: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.form-control {
+    width: 62.5%;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.form-name > p {
+    padding-left: 16px;
+}
+
+.check-wraps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 24px;
+};
+
+.checkbox {
+    width: 5%;
+}
+
+.reason-for-datail{
+    width: 95%;
+}
+
+/* フッター */
+.send-btn {
+    margin-top: 30px;
+    margin-bottom: 140px;
+}
+
+footer {
+    text-align: center;
+    background-color: #707070;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+}
