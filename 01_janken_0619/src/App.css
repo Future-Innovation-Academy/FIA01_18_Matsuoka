@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.order {
+    text-align: center;
+}
+
+/* Figure */
+
+.human_with_flag{
+    stroke:#000;
+    fill: transparent;
+}
+
+.is_left_arm_hidden {
+    display: none;
+}
+
+.is_right_arm_hidden {
+    display: none;
+}
+
+.flag_toggle {
+    align-self: flex-start;
+}
+
+.getAnswer {
+    text-align: center;
+}
+
+.getPoint {
+    text-align: center;
+}
+
+.rule {
+    text-align: center;
+}
