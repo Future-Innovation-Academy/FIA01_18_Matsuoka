@@ -52,6 +52,7 @@
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -64,4 +65,18 @@
 .card img {
   width: 100%;
   height: 100%;
+}
+
+.authentication{
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.winnerContainer img{
+  width: 30px;
+  height: 30px;
+
+}
+
+.rule {
+  margin-left:5px;
 }
